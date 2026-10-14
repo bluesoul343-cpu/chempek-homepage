@@ -1,27 +1,3 @@
-export const company = {
-  name: '켐팩', englishName: 'CHEMPEK', phone: '', address: '', businessNumber: '', logo: '', officialBrand: '',
-  serviceArea: '청주 및 인근 지역',
-  consultationEndpoint: '', // 실제 상담 API 연결 후 응답 처리도 함께 구현하세요.
-}
-// AI 생성 샘플 이미지입니다. 실제 시공 사진으로 교체하세요.
-export const images = {
-  hero: './images/living-sample.webp',
-  kitchen: './images/kitchen-sample.webp',
-  living: './images/living-sample.webp',
-  commercial: './images/office-sample.webp',
-  detail: './images/living-sample.webp',
-}
-export const projects = [
-  { id: 1, title: '온전한 쉼이 머무는 집', category: '주거', type: '아파트 전체 리모델링', image: images.living, gallery: [images.living, images.kitchen], description: '따뜻한 우드와 차분한 색감으로 완성한 거실. 가족의 동선과 수납을 고려한 공간 제안입니다.', scope: '거실 · 주방 · 수납 · 마감 계획' },
-  { id: 2, title: '일상의 중심이 되는 주방', category: '부분공사', type: '주방 부분 리모델링', image: images.kitchen, gallery: [images.kitchen, images.detail], description: '조리와 대화가 자연스럽게 이어지는 주방. 사용자의 생활 패턴에 맞춘 동선과 소재를 제안합니다.', scope: '주방 가구 · 작업대 · 조명 계획' },
-  { id: 3, title: '생각이 자라는 공간', category: '상업', type: '오피스 인테리어', image: images.commercial, gallery: [images.commercial, images.detail], description: '일과 휴식의 균형을 담은 업무 공간. 브랜드의 분위기와 실용적인 구성을 함께 고민합니다.', scope: '공간 구획 · 업무 가구 · 조명 계획' },
-]
-export const services = [
-  ['01', '아파트', '가족의 일상에 꼭 맞는 편안한 집'], ['02', '단독주택', '집의 개성과 생활의 여유를 함께'], ['03', '상가', '브랜드의 첫인상을 만드는 공간'], ['04', '창호 교체', '계절이 바뀌어도 쾌적한 실내'], ['05', '부분 리모델링', '필요한 곳부터, 더 나은 일상으로'],
-]
-export const faqs = [
-  ['견적 상담은 어떻게 진행되나요?', '아래 상담 양식에 공간 종류와 지역, 원하시는 공사 내용을 정리해 주세요. 현재 홈페이지는 초안이며 상담 전송 서비스는 연결 전입니다. 실제 비용은 현장 확인과 공사 범위 협의 후 안내합니다.'],
-  ['공사 기간은 얼마나 걸리나요?', '공간의 크기와 공사 범위, 자재 수급에 따라 달라집니다. 현장 실측 후 구체적인 일정과 공정별 계획을 협의합니다.'],
-  ['거주 중에도 공사가 가능한가요?', '일부 부분공사는 가능하지만 소음, 분진, 안전 문제를 고려해야 합니다. 현장 상황과 공사 범위에 따라 거주 가능 여부를 함께 확인합니다.'],
-  ['공사 후 사후관리는 어떻게 받나요?', '완료 시 함께 공간을 확인하고 관리 방법을 안내하는 것을 기본으로 합니다. 구체적인 사후관리 범위와 기간은 계약 전 확인이 필요합니다.'],
-]
+import { loadContent } from './content'
+export const content = loadContent()
+export const { company, images, projects, services, faqs, hero, about } = content

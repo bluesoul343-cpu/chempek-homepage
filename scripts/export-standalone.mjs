@@ -12,5 +12,6 @@ html = html.replace(/<script type="module"[^>]*src="([^"]+)"[^>]*><\/script>/g, 
   return `<script type="module">${js.replaceAll('</script', '<\\/script')}</script>`
 })
 html = html.replace(/<link rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/g, (_, src) => `<style>${fs.readFileSync(path.join(dist, src.replace(/^\//, '')), 'utf8')}</style>`)
+html = html.replace('</head>', '<script>window.__CHEMPEK_STANDALONE__=true;</script></head>')
 fs.writeFileSync(path.join(dist, 'chempek.html'), html)
 console.log('Standalone website: dist/chempek.html')
